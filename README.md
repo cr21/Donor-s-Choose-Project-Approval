@@ -125,7 +125,7 @@ For Title and Essay we used two different factorizing method
 * after training Decision Tree, I trained another decision Tree but we only used all the features having nonzero feature importance.
 * after training, I analyse the results of all the **false positive test data points** using **word cloud, price distribution**
 
-![heatmap_hyper_param_auc](plot/Heatmap_tfidf.png "heatmap_hyper_param_auc") 
+![heatmap_hyper_param_auc](plot/Heatmap_tfIdf.png "heatmap_hyper_param_auc") 
 
 
 
