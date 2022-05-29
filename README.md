@@ -60,5 +60,26 @@ Label | Description
 ----------|---------------
 `project_is_approved` | A binary flag indicating whether DonorsChoose approved the project. A value of `0` indicates the project was not approved, and a value of `1` indicates the project was approved.
 
+### Explanatory Data Analysis - EDA and plots
+
+![state_wise_plot!](/plot/state_wise.png "state_wise")
+
+### Feature Engineering
+
+### List of categorical feature
+* school state
+* teacher_prefix
+* project_grade_category
+* clean_categories
+* clean_subcategories
+
+### List of Numerical feature
+* price
+* teacher_number_of_previously_posted_projects
+
+### Text Features
+* Title
+* essay
+
 
 
