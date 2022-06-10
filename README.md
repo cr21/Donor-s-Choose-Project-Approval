@@ -134,9 +134,9 @@ For Title and Essay we used two different factorizing method
 
 | Vectorizer               | Model                        | Best Hyper parameters                   | AUC    |
 |--------------------------|------------------------------|-----------------------------------------|--------|
-|  TFIDF                   | Decision Tree                | max_depth : 10, Min_sample_split = 500  | 0.6475 |
-|  TFIDF_weighted W2V      | Decision Tree                | max_depth : 10, Min_sample_split = 500  | 0.6347 |
-|  TFIDF                   | DT with Nonzero feature importance          | max_depth : 10, Min_sample_split = 500    | 0.6549 |
+|  TFIDF                   | Decision Tree                | max_depth : 10, Min_sample_split = 500  | 0.6486 |
+|  TFIDF_weighted W2V      | Decision Tree                | max_depth : 10, Min_sample_split = 500  | 0.6374 |
+|  TFIDF                   | DT with Nonzero feature importance          | max_depth : 10, Min_sample_split = 500    | 0.6496|
 
 
 # Performance of Best Model 
