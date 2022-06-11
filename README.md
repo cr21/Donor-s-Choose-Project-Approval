@@ -137,6 +137,10 @@ For Title and Essay we used two different factorizing method
 |  TFIDF                   | Decision Tree                | max_depth : 10, Min_sample_split = 500  | 0.6486 |
 |  TFIDF_weighted W2V      | Decision Tree                | max_depth : 10, Min_sample_split = 500  | 0.6374 |
 |  TFIDF                   | DT with Nonzero feature importance          | max_depth : 10, Min_sample_split = 500    | 0.6496|
+|  BOW                     | Naive Bayes                  | Alpha : 0.1  | 0.6299 |
+|  TFIDF                   | Naive Bayes          | Alpha : 0.0001    | 0.5220|
+    
+   
 
 
 # Performance of Best Model 
