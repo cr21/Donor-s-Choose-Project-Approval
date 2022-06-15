@@ -116,6 +116,20 @@ For Title and Essay we used two different factorizing method
 2. TfIdf weighted W2V 
    - used **pretrained Glove (300 dimension)** vectors train on very large corpus size.
    
+# Result 
+
+| Vectorizer               | Model                        | Best Hyper parameters                   | AUC    |
+|--------------------------|------------------------------|-----------------------------------------|--------|
+|  BOW                     | Naive Bayes                  | Alpha : 0.1  | 0.6299 |
+|  TFIDF                   | Naive Bayes          | Alpha : 0.0001    | 0.5220|
+|  TFIDF                   | Decision Tree                | max_depth : 10, Min_sample_split = 500  | 0.6486 |
+|  TFIDF_weighted W2V      | Decision Tree                | max_depth : 10, Min_sample_split = 500  | 0.6374 |
+|  TFIDF                   | DT with Nonzero feature importance          | max_depth : 10, Min_sample_split = 500    | 0.6496|
+|  TFIDF                   | GBDT                | max_depth : 3, n_estimators = 100  | 0.7263 |
+|  TFIDF_weighted W2V      | GBDT               | max_depth : 3,  n_estimators = 100   | 0.7137|
+|   W2V, Custom Trainable Embedding layer for Categorical features                   | Model 1 LSTM    | lr : 0.001, Adam, Batch size= 256, epoch = 20 | 0.7243|
+|  Removed Low and High IDF words,W2V, Custom Trainable Embedding layer for Categorical features                   | Model 2 LSTM    | lr : 0.001, Adam, Batch size= 256, epoch = 20 | 0.7385|
+| W2V, One Hot Encoding For Categorical features                   | Model 3 LSTM    | lr : 0.001, Adam, Batch size= 512, epoch = 20 | 0.7584|
 
 
 ### Modeling
@@ -195,7 +209,6 @@ For Title and Essay we used two different factorizing method
 
    3. I did some analysis on the Idf values and based on those values I choose the low and high threshold value. Because very 
 frequent words and very very rare words don't give much information.
-
    4.Removed the low idf value and high idf value words from the train and test data. I go through each of the
 sentence of train and test data and include only those features(words) which are present in the defined IDF range.
    5. Perform tokenization on the modified text data same as you have done for previous model.
@@ -223,7 +236,7 @@ sentence of train and test data and include only those features(words) which are
 ![Model3 accuracy](plot/model3acc.png)
 
 
-### Result 
+# Result 
 
 | Vectorizer               | Model                        | Best Hyper parameters                   | AUC    |
 |--------------------------|------------------------------|-----------------------------------------|--------|
